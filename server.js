@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 
 const cors = require("cors");
-const mongo = require("./Shared/mongo");
+const mongo = require("./mongo/mongo");
 
 (async () => {
     
@@ -24,5 +24,5 @@ const mongo = require("./Shared/mongo");
     app.listen(port, () => console.log(`App listen on port ${port}`));
    
 })();
-const userRoute = require("./Routes/users.routes");
-const resetRoute = require("./Routes/resetPass.routes");
+const userRoute = require("./Router/users.routes");
+const resetRoute = require("./Router/resetPass.routes");
