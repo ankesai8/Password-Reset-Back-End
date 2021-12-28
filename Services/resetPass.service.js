@@ -44,7 +44,7 @@ const service = {
     );
     console.log(data);
 
-    const link = `https://reset-password-muthu.herokuapp.com/resetpassword/${userExist._id}/${token}`;
+    const link = `https://password-reset-6.herokuapp.com/resetpassword/${userExist._id}/${token}`;
 
     await sendMail(userExist.email, "password Reset", link);
     res.status(200).send({
